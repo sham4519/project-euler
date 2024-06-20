@@ -1,0 +1,17 @@
+const { isPrime } = require('./largestPrimeFactor.js')
+
+let n = 1
+let count = 0
+let notFound = true
+
+while(notFound){
+    n++
+    if(isPrime(n)== true){
+            count++
+    }
+    if(count == 10001){
+        notFound = false
+    }
+}
+
+console.log(`${n}`)

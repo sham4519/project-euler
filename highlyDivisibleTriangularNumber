@@ -1,0 +1,31 @@
+const LIMIT = 500
+let count;
+function divisor(num){
+    count = 2
+    //let sqrt = Math.floor(Math.sqrt(num))
+    let pNum = num;
+    for(let i = 2 ; i < num  ;i++){
+        
+        if(pNum % i == 0){
+            count += 1
+            // if (pNum == num) {
+            //     num = num / i
+            // }
+        }
+    }
+    if (count <= LIMIT) return false
+    
+    return true
+}
+
+let n = 0
+let triangleNum = 1
+
+while(true){
+    n += 1
+    triangleNum = n*(n+1)/2
+    
+    if (divisor(triangleNum)== true) break
+    console.log('num:', triangleNum, 'count:', count)
+}
+console.log('Answer:', triangleNum, count)
