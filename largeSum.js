@@ -100,7 +100,8 @@ let numbers = [
     '20849603980134001723930671666823555245252804609722',
     '53503534226472524250874054075591789781264330331690',
 ]
-sum = BigInt(0)
+let sum = BigInt(0)
+
 for(let i=0; i<numbers.length; i++){
     sum += BigInt(numbers[i])
 }
